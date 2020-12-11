@@ -19,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   String _email = "";
   final TextEditingController _pscontroller = TextEditingController();
   String _password = "";
+  bool _passwordVisibleLogin = false;
   bool _rememberMe = false;
   SharedPreferences prefs;
 
@@ -118,13 +119,25 @@ class _LoginScreenState extends State<LoginScreen> {
                             suffixIcon: Padding(
                               padding: const EdgeInsets.only(
                                 left: 30.0,
-                                right: 25.0,
+                                right: 10.0,
                               ),
-                              child: SvgPicture.asset("assets/icons/Lock.svg",
-                                  height: 25),
+                              child: IconButton(
+                                icon: Icon(
+                                  _passwordVisibleLogin
+                                      ? Icons.visibility
+                                      : Icons.visibility_off,
+                                  color: Theme.of(context).primaryColorDark,
+                                ),
+                                onPressed: () {
+                                  setState(() {
+                                    _passwordVisibleLogin =
+                                        !_passwordVisibleLogin;
+                                  });
+                                },
+                              ),
                             ),
                           ),
-                          obscureText: true,
+                          obscureText: _passwordVisibleLogin,
                         ),
                         SizedBox(
                           height: 10,
