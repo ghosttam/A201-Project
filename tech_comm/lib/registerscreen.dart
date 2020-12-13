@@ -325,28 +325,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                       state.didChange(value);
                                     },
                                   ),
-                                  Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text("I agree to the ",
-                                            style: TextStyle(fontSize: 14)),
-                                        GestureDetector(
-                                            onTap: _showEULA,
-                                            child: Text('Terms and Conditions',
-                                                style: TextStyle(
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.amber[800]))),
-                                      ]),
+                                  Text("I agree to the ",
+                                      style: TextStyle(fontSize: 14)),
+                                  GestureDetector(
+                                      onTap: _showEULA,
+                                      child: Text('Terms and Conditions',
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.amber[800]))),
                                 ],
                               ),
+                              Text(state.errorText ?? '',
+                                  style: TextStyle(
+                                      color: Theme.of(context).errorColor))
                             ],
                           );
                         },
                         validator: (value) {
                           if (!_termsCondition) {
-                            return '';
+                            return 'You need to accept Terms and Conditions';
                           } else {
                             return null;
                           }
