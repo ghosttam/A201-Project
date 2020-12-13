@@ -344,7 +344,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         },
                         validator: (value) {
                           if (!_termsCondition) {
-                            return 'You need to accept Terms and Conditions';
+                            return 'You need to agree the Terms and Conditions';
                           } else {
                             return null;
                           }
