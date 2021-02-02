@@ -1,0 +1,24 @@
+[23-Jan-2021 09:26:43 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 9
+[23-Jan-2021 09:26:43 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 9
+[23-Jan-2021 09:27:16 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 9
+[23-Jan-2021 09:27:16 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 9
+[23-Jan-2021 09:27:35 UTC] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 9
+[23-Jan-2021 09:27:35 UTC] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 9
+[23-Jan-2021 09:39:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php:37
+Stack trace:
+#0 {main}
+  thrown in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 37
+[23-Jan-2021 09:41:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php:37
+Stack trace:
+#0 {main}
+  thrown in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 37
+[23-Jan-2021 09:46:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php:37
+Stack trace:
+#0 {main}
+  thrown in /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php on line 37
+[01-Feb-2021 11:15:48 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (to):  in /home4/steadybo/public_html/techcomm/php/PHPMailer/src/PHPMailer.php:1083
+Stack trace:
+#0 /home4/steadybo/public_html/techcomm/php/PHPMailer/src/PHPMailer.php(1005): PHPMailer\PHPMailer\PHPMailer->addOrEnqueueAnAddress('to', '', 'Receiver')
+#1 /home4/steadybo/public_html/techcomm/php/PHPMailer/index.php(35): PHPMailer\PHPMailer\PHPMailer->addAddress(NULL, 'Receiver')
+#2 {main}
+  thrown in /home4/steadybo/public_html/techcomm/php/PHPMailer/src/PHPMailer.php on line 1083
