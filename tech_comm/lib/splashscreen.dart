@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:tech_comm/loginscreen.dart';
+import 'package:tech_comm/choicemenu.dart';
 
 void main() => runApp(SplashScreen());
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
   double screenHeight, screenWidth;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -68,7 +74,7 @@ class _ProgressIndicatorState extends State<ProgressIndicator>
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                    builder: (BuildContext context) => LoginScreen()));
+                    builder: (BuildContext context) => ChoiceMenu()));
           }
         });
       });
@@ -98,6 +104,7 @@ ThemeData theme() {
     scaffoldBackgroundColor: Colors.white,
     fontFamily: "Muli",
     appBarTheme: AppBarTheme(
+      centerTitle: true,
       color: Colors.white,
       elevation: 0,
       brightness: Brightness.light,
